@@ -1,0 +1,11 @@
+<p>Hey {{myName}}</p>
+<ul>
+    <li *ng-for="#name of names">{{name}}</li>
+</ul>
+<div *ng-if="names.length > 3">
+    You have too many friends
+</div>
+<input #newname (keyup)="endTyping($event)">
+<button (click)="addName(newname)">Add new name</button>
+<p>{{newname.value}}</p>
+<p>{{v}}</p>

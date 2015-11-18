@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular</title>
+    <base href="/">
+    <!-- build:js(.) scripts/main.min.js -->
+    <!-- inject:js -->
+    <!-- endinject -->
+    <!-- endbuild -->
+</head>
+<body ng-app="application">
+
+<!-- build:remove-->
+<script src="jspm_packages/system.js"></script>
+<script src="jspm.config.js"></script>
+<script>
+    System.import('src').catch(
+            console.error.bind(console)
+    )
+</script>
+<!-- endbuild-->
+
+<div ui-view></div>
+
+</body>
+</html>
