@@ -10,17 +10,6 @@ function init(gulp, $) {
     var COLORS = $.util.colors,
         LOG = $.util.log;
 
-    //gulp.task('test', function () {
-    //    return gulp.src(path.tests)
-    //        .pipe($.jasmine({
-    //            config: jasmineConfig,
-    //            verbose: true
-    //        }));
-
-    //jasmine.loadConfig(jasmineConfig);
-    //jasmine.execute();
-    //});
-
     gulp.task('karma', (cb) => {
         const server = new Server({
             configFile: paths.karmaConfig,

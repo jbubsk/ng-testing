@@ -1,11 +1,20 @@
 module.exports = function (config) {
     config.set({
-        frameworks: ['jspm', 'jasmine'],
-        plugins: ['karma-jspm', 'karma-jasmine', 'karma-phantomjs-launcher'],
+        frameworks: [
+            'jspm',
+            'jasmine',
+            'phantomjs-shim'
+        ],
+        plugins: [
+            'karma-jspm',
+            'karma-jasmine',
+            'karma-phantomjs-shim',
+            'karma-phantomjs-launcher'
+        ],
         jspm: {
             config: 'jspm.config.js',
-            loadFiles: ['src/angular/app.js', 'test/jasmine/simple*.Spec.js'],
-            //serveFiles: ['src/angular/**/*.js']
+            loadFiles: ['src/angular/app.js', 'src/angular/**/*.spec.js'],
+            serveFiles: ['src/angular/**/*.+(js|html)']
         },
         proxies: {
             '/test/': '/base/test/',
@@ -13,6 +22,6 @@ module.exports = function (config) {
             '/jspm_packages/': '/base/jspm_packages/'
         },
         browsers: ['PhantomJS'],
-        browserNoActivityTimeout: 50000
+        browserNoActivityTimeout: 5000
     });
 };

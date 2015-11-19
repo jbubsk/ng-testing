@@ -1,16 +1,15 @@
-require('angular');
-require('angular-ui-router');
-require('angular-resource');
+import 'angular';
 
-var servicesModule = require('./services/auth'),
-    formModule = require('./modules/form'),
-    template = require('./modules/main.template.html!text');
+import 'angular-ui-router';
+import 'angular-resource';
+
+import servicesModule from './services/auth';
+import loginModule from './modules/login/login.module';
 
 angular.module('application', [
         'ui.router',
-        'ngResource',
         servicesModule.name,
-        formModule.name
+        loginModule.name
     ])
     .config(function ($locationProvider, $urlRouterProvider) {
         $locationProvider.html5Mode({
@@ -19,14 +18,4 @@ angular.module('application', [
         });
         $locationProvider.hashPrefix('!');
         $urlRouterProvider.otherwise('/');
-
-    })
-    .config(function ($stateProvider) {
-        $stateProvider.state({
-            name: 'main',
-            url: '/',
-            controller: 'DataController',
-            controllerAs: 'ctrl',
-            template: template
-        });
     });

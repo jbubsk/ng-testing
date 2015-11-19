@@ -22,16 +22,29 @@ System.config({
 
   map: {
     "angular": "github:angular/bower-angular@1.4.7",
+    "angular-animate": "npm:angular-animate@1.4.5",
+    "angular-bootstrap-colorpicker": "github:buberdds/angular-bootstrap-colorpicker@3.0.19",
+    "angular-local-storage": "npm:angular-local-storage@0.2.2",
+    "angular-messages": "npm:angular-messages@1.4.5",
     "angular-mocks": "npm:angular-mocks@1.4.7",
     "angular-resource": "github:angular/bower-angular-resource@1.4.7",
+    "angular-sanitize": "npm:angular-sanitize@1.4.5",
+    "angular-ui": "github:angular-ui/bootstrap-bower@0.13.4",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.15",
     "angular2": "npm:angular2@2.0.0-alpha.46",
     "babel": "npm:babel-core@5.8.34",
     "babel-runtime": "npm:babel-runtime@5.8.34",
+    "bootstrap-css-only": "github:fyockm/bootstrap-css-only@3.3.5",
     "core-js": "npm:core-js@1.2.6",
+    "css": "github:systemjs/plugin-css@0.1.16",
     "es6-shim": "github:es-shims/es6-shim@0.33.13",
+    "font-awesome": "npm:font-awesome@4.4.0",
+    "json": "github:systemjs/plugin-json@0.1.0",
     "karma.config": "karma.config.js",
+    "ng-bs-animated-button": "github:jeremypeters/ng-bs-animated-button@2.0.3",
+    "ng-file-upload": "npm:ng-file-upload@7.2.0",
     "reflect-metadata": "npm:reflect-metadata@0.1.2",
+    "si-table": "github:simplicitylabs/si-table@0.2.3",
     "text": "github:systemjs/plugin-text@0.0.3",
     "ts": "github:frankwallis/plugin-typescript@2.2.1",
     "typescript": "npm:typescript@1.6.2",
@@ -78,6 +91,9 @@ System.config({
     "npm:@reactivex/rxjs@5.0.0-alpha.7": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:angular-animate@1.4.5": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:angular2@2.0.0-alpha.46": {
@@ -235,6 +251,9 @@ System.config({
       "create-hash": "npm:create-hash@1.1.2",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0"
     },
+    "npm:font-awesome@4.4.0": {
+      "css": "github:systemjs/plugin-css@0.1.16"
+    },
     "npm:hash.js@1.0.3": {
       "inherits": "npm:inherits@2.0.1"
     },
@@ -244,6 +263,9 @@ System.config({
     "npm:miller-rabin@4.0.0": {
       "bn.js": "npm:bn.js@4.1.1",
       "brorand": "npm:brorand@1.0.5"
+    },
+    "npm:ng-file-upload@7.2.0": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:parse-asn1@5.0.0": {
       "asn1.js": "npm:asn1.js@4.0.0",
