@@ -1,5 +1,6 @@
 import 'angular';
 import 'angular-mocks';
+
 import LoginModel from './login-model';
 
 describe("test angular", function () {
@@ -7,6 +8,7 @@ describe("test angular", function () {
 
 
     beforeEach(function () {
+        angular.mock.module('ui.router');
         angular.mock.module('app.login');
         angular.mock.module('app.services');
     });

@@ -4,7 +4,7 @@ import path from './path';
 module.exports = function (gulp) {
 
     gulp.task('watch', function (done) {
-        gulp.watch('./app/**/*.*', browserSync.reload);
+        gulp.watch('./src/**/*.*', browserSync.reload);
         done();
     });
 

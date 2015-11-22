@@ -1,0 +1,68 @@
+<style>
+    .slide {
+        display: flex;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 45px;
+        height: 45px;
+        border: dotted grey 1px;
+        border-radius: 5px;
+    }
+
+    .slide-name {
+        align-self: center;
+    }
+
+    .slider-wrapper {
+        margin: 40px 0 0 40px;
+        width: 150px;
+        overflow: hidden;
+        background: lightgrey;
+    }
+
+    .slider-content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .slider-control-container {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 150px;
+        height: 45px;
+    }
+
+    .slider-control {
+        position: relative;
+        height: 20px;
+        width: 20px;
+        background: #fff2f9;
+        align-self: center;
+        text-align: center;
+        border-radius: 50%;
+    }
+
+    .left::before {
+        content: '<';
+    }
+
+    .right::before {
+        content: '>';
+    }
+    .active {
+        color: green;
+    }
+</style>
+
+<div class="slider-wrapper">
+    <div class="slider-control-container">
+        <div class="slider-control left" ng-click="shiftLeft()"></div>
+        <div class="slider-control right"></div>
+    </div>
+    <div class="slider-content">
+        <div ng-repeat="slide in slides" class="slide" ng-class="{active: slide.isActive}">
+            <strong ng-bind="slide.name" class="slide-name"></strong>
+        </div>
+    </div>
+</div>
