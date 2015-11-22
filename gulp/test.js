@@ -1,7 +1,6 @@
 "use strict";
 
 import paths from './path';
-import jasmineConfig from '../jasmine.config';
 import {Server} from 'karma';
 import argv from 'argv';
 
